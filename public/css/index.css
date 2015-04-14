@@ -1,0 +1,10 @@
+.form input,
+.form select
+.form button {
+	margin: 10px 0 10px;
+}
+#quoteHint {
+	border-top: 2px solid #DDD;
+	margin-top: 20px;
+	color: #CCC;
+}

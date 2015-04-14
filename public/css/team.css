@@ -1,0 +1,7 @@
+ul.listing > li {
+	padding: 10px 0;
+	list-style-type: none;
+}
+ul.teamMemberInfo  {
+	margin-left: 135px;
+}
