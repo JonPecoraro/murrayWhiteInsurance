@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-9">
-					<a href="/">{{ HTML::image("/img/bannerHeading.png", "Murray White Insurance Agency") }}</a>
+					<a href="/">{{ HTML::image("/img/bannerHeading.png", "Murray White Insurance Agency", ["class" => "img-responsive"]) }}</a>
 				</div>
 				<div class="contact" class="col-xs-3">
 					<span class="phone">(336) 889-4747</span>
@@ -64,6 +64,9 @@
 					<li @if (Request::is("companies")) class="active"@endif>
 						{{ HTML::link("companies", "Represented Companies") }}
 					</li>
+					<li @if (Request::is("about")) class="active"@endif>
+						{{ HTML::link("about", "About Us") }}
+					</li>
 					<li @if (Request::is("team")) class="active"@endif>
 						{{ HTML::link("team", "Our Team") }}
 					</li>
@@ -93,18 +96,29 @@
 		@include("disclaimer")
 	</main>
 	<footer>
-		<section class="information">
+		<div class="container information">
 			<div class="row">
 				<div class="col-xs-4">
-					<h3>About Us</h3>
-					<p>
-						A fully licensed and professional insurance agency, Murray White Insurance Agency, Inc. is an Independent Professional company that works for you to make sure you get the right coverage at the right price. Look to Murray White Insurance for coverage that’s tailored to your needs – including homeowners, commercial/business, flood, renters, and auto – based on competitive quotes from a carefully selected group of local, national and international insurers who meet our strict standards.
-					</p>
+					<h3>Testimonials</h3>
+					<div class="testimonial">
+						<p>
+							I love Murray White Insurance Agency. They have been serving me well for many years. The agents are always quick
+							to respond and willing to work with my limited budget. They have helped my family and I get back on our feet
+							during trying times.
+							<div class="testimonialSignature">- Jonathan Pecoraro</div>
+						</p>
+					</div>
 				</div>
 				<div class="col-xs-4">
-					{{ HTML::link("whoAreWe", "Who are we") }}
-					{{ HTML::link("story", "Our story") }}
-					{{ HTML::link("mission", "Mission") }}
+					<h3>Our Mission</h3>
+					<p>
+						Our mission is to Independently represent many insurance companies in order to provide our customers with the highest
+						quality products at the most affordable price.
+					</p>
+					<p>
+						We never forget that the customer is our reason for being here and that we must exceed their expectations in service
+						standards. We will treat each customer as we would expect to be treated ourselves.
+					</p>
 				</div>
 				<div class="col-xs-4">
 					<span class="social">
@@ -116,14 +130,17 @@
 						</a>
 					</span>
 					<span class="phone">(336) 889-4747</span>
-					<span class="address">1911 N Main St, High Point, NC</span>
+					<span class="address">
+						1911 N Main St<br />
+						High Point, NC
+					</span>
 				</div>
 			</div>
-		</section>
-		<section class="copywright">
+		</div>
+		<div class="copywright">
 			&copy; Murray White Insurance {{ date("Y") }} |
 			{{ HTML::link("#disclaimerModal", "Disclaimer", ["data-toggle" => "modal"]) }}
-		</section>
+		</div>
 	</footer>
 	{{ HTML::script("/packages/jquery/jquery-1.11.1.min.js") }}
 	{{ HTML::script("/packages/bootstrap/js/bootstrap.min.js") }}

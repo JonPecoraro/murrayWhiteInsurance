@@ -1,4 +1,11 @@
-.form input,
-.form button {
-	margin: 10px 0 10px;
+#map {
+	width: 350px;
+	height: 250px;
+	background-color: #CCC;	
+}
+.form input {
+	margin-bottom: 20px;
+}
+.form .btn {
+	margin: 10px 0;
 }

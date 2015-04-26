@@ -6,6 +6,15 @@ $(function() {
 	$('.dateOfBirthMonth').prepend($('<option value="" selected="selected">Month</option>'));
 	$('.dateOfBirthYear').prepend($('<option value="" selected="selected">Year</option>'));
 
+	$('#autoQuoteForm').on('submit', function(e) {
+		if (!autoQuoteIsValid()) {
+			e.preventDefault();
+			$('.errorBg').parents('.hide').removeClass('hide');
+			window.scrollTo(0, 0);
+			return;
+		}
+	});
+
 	$('#addDriver').on('click', function() {
 		var $insuredDrivers = $('#insuredDrivers');
 		var $insuredDriversTemplate = $('#insuredDriversTemplate').clone(true);
@@ -144,9 +153,7 @@ function driverIsValid(driverId) {
 	var isValid = true;
 	var $driver = $('.insuredDriver[data-driver-id="' + driverId + '"]');
 	
-	// remove error classes
-	$driver.find('.errorField').removeClass('errorField');
-	$driver.find('.errorLabel').removeClass('errorLabel');
+	clearErrors($driver);
 
 	// validate all visible add driver fields
 	$driver.find('.required').each(function() {
@@ -167,10 +174,8 @@ function driverIsValid(driverId) {
 function vehicleIsValid(vehicleId) {
 	var isValid = true;
 	var $vehicle = $('.vehicle[data-vehicle-id="' + vehicleId + '"]');
-	
-	// remove error classes
-	$vehicle.find('.errorField').removeClass('errorField');
-	$vehicle.find('.errorLabel').removeClass('errorLabel');
+
+	clearErrors($vehicle);
 
 	// validate all visible add vehicle fields
 	$vehicle.find('.required').each(function() {
@@ -183,6 +188,12 @@ function vehicleIsValid(vehicleId) {
 	});
 
 	return isValid;
+}
+
+// remove error classes
+function clearErrors($element) {
+	$element.find('.errorField').removeClass('errorField');
+	$element.find('.errorLabel').removeClass('errorLabel');
 }
 
 function updateItemId($item, oldId, newId) {
@@ -203,4 +214,22 @@ function updateItemId($item, oldId, newId) {
 		var newName = $this.attr('for').split('_')[0] + '_' + newId;
 		$this.attr('for', newName);
 	});
+}
+
+function autoQuoteIsValid() {
+	var isValid = true;
+	$autoQuoteForm = $('#autoQuoteForm');
+
+	clearErrors($autoQuoteForm);
+
+	$autoQuoteForm.find('.required').each(function() {
+		var $this = $(this);
+		if (!$this.val()) {
+			$this.addClass('errorField');
+			$this.closest('label').addClass('errorLabel');
+			isValid = false;
+		}
+	});
+
+	return isValid;
 }

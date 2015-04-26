@@ -1,5 +1,9 @@
+body {
+	background-color: #202020;
+}
 header {
-	padding: 30px 0 30px;
+	background-color: #FFF;
+	padding: 30px 0; /* top & bottom padding of 30px, right & left padding of 0 */
 }
 header h1 {
 	margin-top: 10px;
@@ -22,10 +26,12 @@ header .contact .genericon {
 	color: #4A1144;
 }
 header .navbar-nav li>a {
-	padding: 20px 0;
+	padding: 20px 0; /* top & bottom padding of 20px, right & left padding of 0 */
 }
 #nav {
 	background: linear-gradient(to bottom, #732b6b 0%,#45033e 100%);
+	border-radius: 0; /* override bootstrap style */
+	margin-bottom: 0; /* override bootstrap style */
 }
 #nav a {
 	font-size: 20px;
@@ -37,16 +43,39 @@ header .navbar-nav li>a {
 #nav .active a {
 	background: linear-gradient(to bottom, #470540 0%,#45033e 100%);
 }
+main {
+	background-color: #FFF;
+	padding: 20px 0; /* top & bottom padding of 20px, right & left padding of 0 */
+}
+/* override bootstrap styles */
+main .panel-default>.panel-heading {
+	background-image: linear-gradient(to bottom, #F5F2FF 0, #F1F0FF 100%);
+}
+main .btn-default {
+	background-image: linear-gradient(to bottom, #FFF 0, #F1F0FF 100%);
+}
+main .btn-default:hover,
+main .input-group-addon,
+main .nav>li>a:hover,
+main .nav>li>a:focus {
+	background-color: #F1F0FF;
+}
+main .btn-primary {
+	background-image: linear-gradient(to bottom, #732b6b 0%,#45033e 100%);
+}
+main .btn-primary:hover {
+	background-color: #45033e;
+}
+/* end override bootstrap styles */
 h2.pageTitle {
 	color: #4A1144;
-	margin-top: 0; /* because it is under #nav, which has margin-bottom: 20px; */
+	margin-top: 0; /* because main already has top padding of 20px; */
 	padding-bottom: 5px;
 	border-bottom: 1px solid #AAA;
 }
 footer {
-	margin-top: 20px;
 	text-align: center;
-	background-color: #202020;
+	background-color: #4d1347;
 	color: #FFF;
 }
 footer a,
@@ -55,7 +84,6 @@ footer a:active {
 	color: #FFF;
 }
 footer .information {
-	background-color: #4d1347;
 	padding: 5px;
 }
 footer .information a,
@@ -64,7 +92,14 @@ footer .information .address,
 footer .information .social {
 	display: block;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 18px;
+}
+footer .information .testimonial {
+	min-height: 135px;
+	background-color: #380233;
+	border: 1px solid #380233;
+	border-radius: 15px;
+	padding: 10px;
 }
 footer .information .social a {
 	padding: 5px;
@@ -77,19 +112,29 @@ footer .information .social .genericon {
 	font-size: 25px;
 }
 footer .copywright {
-	padding-top: 10px;
-	padding-bottom: 20px;
+	background-color: #202020;
+	padding: 10px 0 20px;
 }
 .genericon {
 	text-decoration: none;
 	margin-top: 2px;
 }
+/* Generic styles that all pages can use */
 .hide {
 	display: none;
 }
-.errorField {
+.errorField,
+.errorBg {
 	border: 1px solid #801818;
 }
 .errorLabel {
 	color: #801818;
+}
+.errorBg,
+.successBg {
+	padding: 10px;
+	border-radius: 4px;
+}
+.successBg {
+	border: 1px solid #090;
 }

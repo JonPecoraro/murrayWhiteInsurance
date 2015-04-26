@@ -6,5 +6,6 @@
 #quoteHint {
 	border-top: 2px solid #DDD;
 	margin-top: 20px;
-	color: #CCC;
+	color: #AAA;
+	clear: both;
 }

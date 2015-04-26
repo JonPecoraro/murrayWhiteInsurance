@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'smtp.mandrillapp.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'webmaster@murraywhiteinc.com', 'name' => 'Murray White Inc. Webmaster'),
+	'from' => array('address' => 'murraywhite@murraymwhiteinc.com', 'name' => 'Murray White Inc.'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'JonPecoraro@gmail.com',
+	'username' => 'murraywhite@murraymwhiteinc.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'password',
+	'password' => 'o_H3o1tn5Ge6J9aTyEsYmA',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('headContent')
+	{{ HTML::style("/css/insurance.css") }}
+@endsection
+
 @section('pageTitle')
 	Insurance Options
 @endsection
@@ -7,11 +11,19 @@
 @section('content')
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Personal Lines</h3>
-				</div>
-				<div class="panel-body">
+			<ul id="insuranceTabs" class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">Personal Lines</a>
+				</li>
+				<li role="presentation">
+					<a href="#commercial" aria-controls="commercial" role="tab" data-toggle="tab">Commercial Lines</a>
+				</li>
+				<li role="presentation">
+					<a href="#life" aria-controls="life" role="tab" data-toggle="tab">Life &amp; Health Lines</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="personal">
 					<p>
 						Personal insurance is the type of insurance commonly sold to individuals and families. Our
 						personal lines of insurance encompass a wide variety of coverage; anything from buying your first
@@ -29,12 +41,7 @@
 						and we'll let you know if we can find a solution for your insurance coverage.
 					</p>
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Commercial Lines</h3>
-				</div>
-				<div class="panel-body">
+				<div role="tabpanel" class="tab-pane" id="commercial">
 					<p>
 						Commercial insurance is offered for business and commercial enterprise owners. Our high quality
 						commercial insurance lines remove the stress from business owners so they don't have to worry if
@@ -59,12 +66,7 @@
 					</p>
 					If you have a need for commercial insurance that is not listed, contact us and we'll let you know if we can find a solution for your insurance coverage.
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Life &amp; Health Lines</h3>
-				</div>
-				<div class="panel-body">
+				<div role="tabpanel" class="tab-pane" id="life">
 					<p>
 						Life and health insurance gives you and your family the satisfaction to know that they will be
 						covered in the case of a misfortune. The value of protecting your loved ones during trying times is

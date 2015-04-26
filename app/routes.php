@@ -32,7 +32,18 @@ Route::post('quotes', function()
 
 Route::post('autoQuote', function()
 {
-	return View::make('quotes.auto')->with('title', 'Quotes');
+	if (Request::has("btnSubmitQuote"))
+	{
+		Mail::send('emails.autoQuote', Request::all(), function($message)
+		{
+		    $message->to('murraywhite@murraymwhiteinc.com', 'Murray White')->subject('New Auto Quote Request');
+		});
+		return View::make('quotes.index')->with('title', 'Quotes')->with("success", "success");
+	}
+	else
+	{
+		return View::make('quotes.auto')->with('title', 'Quotes');
+	}
 });
 
 Route::get('companies', function()
@@ -55,15 +66,11 @@ Route::post('contact', function()
 	return View::make('contact.index')->with('title', 'Contact');
 });
 
-Route::get('whoAreWe', function()
+Route::get('about', function()
 {
-	return View::make('whoAreWe.index')->with('title', 'Who Are We');
+	return View::make('about.index')->with('title', 'About Us');
 });
 
-Route::get('story', function()
-{
-	return View::make('story.index')->with('title', 'Our Story');
-});
 Route::get('mission', function()
 {
 	return View::make('mission.index')->with('title', 'Mission Statement');

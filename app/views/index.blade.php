@@ -25,7 +25,7 @@
 					], Form::old("type"), ["class" => "form-control"])
 				}}
 				{{ Form::text("zipcode", Form::old("zipcode"), ["placeholder" => "Zip Code", "class" => "form-control"]) }}
-				{{ Form::submit("Get Quote", ["class" => "btn btn-primary"]) }}
+				{{ Form::submit("Get Quote", ["class" => "btn btn-primary pull-right"]) }}
 				<p id="quoteHint">A representative from Murray White Insurance Agency will get in touch with you upon completing your quote.</p>
 			{{ Form::close() }}
 		</div>

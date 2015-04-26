@@ -8,28 +8,36 @@
 <h3>Contact Information</h3>
 <table class="tableBorder">
 	<tr>
+		<td><strong>Name</strong></td>
+		<td>{{{ $name }}}</td>
+	</tr>
+	<tr>
+		<td><strong>Email Address</strong></td>
+		<td>{{{ $email }}}</td>
+	</tr>
+	<tr>
 		<td><strong>Number</strong></td>
-		<td>{{ $phone }}</td>
+		<td>{{{ $phone }}}</td>
 	</tr>
 	<tr>
 		<td><strong>Mailing Address</strong></td>
-		<td>{{ $mailingAddress }}</td>
+		<td>{{{ $mailingAddress }}} {{ $zipcode }}</td>
 	</tr>
 	<tr>
 		<td><strong>Garaging Address</strong></td>
-		<td>{{ $garagingAddress }}</td>
+		<td>{{{ $garagingAddress }}}</td>
 	</tr>
 	<tr>
 		<td><strong>County</strong></td>
-		<td>{{ $county }}</td>
+		<td>{{{ $county }}}</td>
 	</tr>
 	<tr>
 		<td><strong>Current Auto Policy Premium & Coverage</strong></td>
-		<td>{{ $currentPremium }}</td>
+		<td>{{{ $currentPremium }}}</td>
 	</tr>
 	<tr>
 		<td><strong>Non-Drivers</strong></td>
-		<td>{{ $nonDrivers[0] }}</td>
+		<td>{{{ $nonDrivers[0] }}}</td>
 	</tr>
 </table>
 
@@ -40,23 +48,23 @@
 	<table class="tableBorder">
 		<tr>
 			<td><strong>Name</strong></td>
-			<td>{{ ${"firstName_" . $counter} }} {{ ${"lastName_" . $counter} }}</td>
+			<td>{{{ ${"firstName_" . $counter} }}} {{{ ${"lastName_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>Date of Birth</strong></td>
-			<td>{{ ${"dateOfBirthMonth_" . $counter} }}/{{ ${"dateOfBirthDay_" . $counter} }}/{{ ${"dateOfBirthYear_" . $counter} }}</td>
+			<td>{{{ ${"dateOfBirthMonth_" . $counter} }}}/{{{ ${"dateOfBirthDay_" . $counter} }}}/{{{ ${"dateOfBirthYear_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>SSN</strong></td>
-			<td>{{ ${"social_" . $counter} }}</td>
+			<td>{{{ ${"social_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>License Number</strong></td>
-			<td>{{ ${"license_" . $counter} }}</td>
+			<td>{{{ ${"license_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>State</strong></td>
-			<td>{{ ${"state_" . $counter} }}</td>
+			<td>{{{ ${"state_" . $counter} }}}</td>
 		</tr>
 	<table>
 	<br />
@@ -70,23 +78,23 @@
 	<table class="tableBorder">
 		<tr>
 			<td><strong>Vehicle</strong></td>
-			<td>{{ ${"vehicleYear_" . $counter} }} {{ ${"make_" . $counter} }} {{ ${"model_" . $counter} }}</td>
+			<td>{{{ ${"vehicleYear_" . $counter} }}} {{{ ${"make_" . $counter} }}} {{{ ${"model_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>VIN Number</strong></td>
-			<td>{{ ${"vinNumber_" . $counter} }}</td>
+			<td>{{{ ${"vinNumber_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>Mileage</strong></td>
-			<td>{{ ${"mileage_" . $counter} }}</td>
+			<td>{{{ ${"mileage_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>Usage</strong></td>
-			<td>{{ ${"usage_" . $counter} }}</td>
+			<td>{{{ ${"usage_" . $counter} }}}</td>
 		</tr>
 		<tr>
 			<td><strong>Special Features</strong></td>
-			<td>{{ ${"features_" . $counter} }}</td>
+			<td>{{{ ${"features_" . $counter} }}}</td>
 		</tr>
 	<table>
 	<br />

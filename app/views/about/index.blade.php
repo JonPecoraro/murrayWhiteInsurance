@@ -1,22 +1,23 @@
 @extends('layouts.default')
 
 @section('headContent')
-	{{ HTML::style("/css/whoAreWe.css") }}
+	{{ HTML::style("/css/about.css") }}
 @endsection
 
 @section('pageTitle')
-	Who Are We
+	About Us
 @endsection
 
 @section('content')
 	<div class="row">
 		<div class="col-xs-12">
+			<h3>Who We Are</h3>
 			<p>
 				{{ HTML::image("/img/groupPhotoScaled.jpg", "Murray White Insurance group photo", ["class" => "img-responsive img-rounded", "align" => "left"]) }}
-				Murray White Insurance Agency is an independent insurance agency organized in 1937, with an accent on the word
-				"independent". We represent many of the major insurance companies, but are not "obligated" to any one of them. 
-				This gives us greater flexibility in how we serve our clients. We can choose from a wider range of policies and 
-				features and thereby select the company and the coverage that precisely suits your requirements.
+				Murray White Insurance Agency is an independent insurance agency with an accent on the word "independent". We
+				represent many of the major insurance companies, but are not "obligated" to any one of them. This gives us greater
+				flexibility in how we serve our clients. We can choose from a wider range of policies and features and thereby select
+				the company and the coverage that precisely suits your requirements.
 			</p>
 			<p>
 				Our logo and sign reads "general insurance" which means that we can provide insurance and bonds for virtually
@@ -65,6 +66,37 @@
 			<p>
 				It is our goal to help individuals and employer groups navigate the complexities of the benefits necessary to
 				provide the best possible protection and peace of mind in the working environment today.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Our Story</h3>
+			<p>
+				{{ HTML::image("/img/murraySeniorScaled.jpg", "Murray White Senior", ["class" => "img-responsive img-rounded", "align" => "left"]) }} 
+				Murray M. White, Inc. was originally organized in July of 1937 after Murray M. White, Sr. agreed to purchase the assets
+				of the Manufacturers Insurance Agency and the Furniture City Insurance Agency with the purpose of acting as an agency of
+				insurance companies in the selling and soliciting of insurance coverage.
+			</p>
+			<p>
+				Since that time the organization has grown from its original staff of three and it's original staff of three and its small
+				office at 118 E. Commerce Street to its present location, 1911 N. Main Street. The primary source of income for the
+				organization consists of commission income and service fees for various types of insurance coverages. The agency is proud
+				of its growth in the high quality of its service to its customers.
+			</p>
+			<p>
+				Murray M. White Sr., Secretary, General Manager and Founder semi-retired in 1969 due to ill health, and passed away
+				November 26, 1971.
+			</p>
+			<p>
+				The affairs of the agency are handled administratively by the officers and staff although the officers are responsible for
+				establishing policy, approving new programs,  and delegating responsibility and authority. The agency's success is directly
+				related to the loyalty and dedication of both the officers and the staff.
+			</p>
+			<p>
+				Murray White Associates, Inc. is an affiliated company of Murray M. White, Inc. and was founded June 9, 1973 with the
+				purpose of specializing in employee benefit programs, group life and medical long term disability, high limit accident,
+				pension and profit sharing programs, individual life, disability income and hospital insurance.
 			</p>
 		</div>
 	</div>
