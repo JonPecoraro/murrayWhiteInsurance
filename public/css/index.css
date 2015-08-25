@@ -10,5 +10,5 @@
 	clear: both;
 }
 #contentRow {
-	background-image: url('/img/buildingScaled.jpg') no-repeat;
+	background: url('/img/buildingScaled.jpg') no-repeat;
 }

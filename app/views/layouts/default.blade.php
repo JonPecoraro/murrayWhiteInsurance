@@ -99,28 +99,6 @@
 		<div class="container information">
 			<div class="row">
 				<div class="col-xs-4">
-					<h3>Testimonials</h3>
-					<div class="testimonial">
-						<p>
-							I love Murray White Insurance Agency. They have been serving me well for many years. The agents are always quick
-							to respond and willing to work with my limited budget. They have helped my family and I get back on our feet
-							during trying times.
-							<div class="testimonialSignature">- Jonathan Pecoraro</div>
-						</p>
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<h3>Our Mission</h3>
-					<p>
-						Our mission is to Independently represent many insurance companies in order to provide our customers with the highest
-						quality products at the most affordable price.
-					</p>
-					<p>
-						We never forget that the customer is our reason for being here and that we must exceed their expectations in service
-						standards. We will treat each customer as we would expect to be treated ourselves.
-					</p>
-				</div>
-				<div class="col-xs-4">
 					<span class="social">
 						<a href="https://www.facebook.com/MurrayWhiteInsuranceAgency" target="_blank">
 							<span class="genericon genericon-facebook-alt"></span>
@@ -134,6 +112,28 @@
 						1911 N Main St<br />
 						High Point, NC
 					</span>
+				</div>
+				<div class="col-xs-4">
+					<h3>Our Mission</h3>
+					<p>
+						Our mission is to Independently represent many insurance companies in order to provide our customers with the highest
+						quality products at the most affordable price.
+					</p>
+					<p>
+						We never forget that the customer is our reason for being here and that we must exceed their expectations in service
+						standards. We will treat each customer as we would expect to be treated ourselves.
+					</p>
+				</div>
+				<div class="col-xs-4">
+					<h3>Testimonials</h3>
+					<div class="testimonial">
+						<p>
+							I love Murray White Insurance Agency. They have been serving me well for many years. The agents are always quick
+							to respond and willing to work with my limited budget. They have helped my family and I get back on our feet
+							during trying times.
+							<div class="testimonialSignature">- Jonathan Pecoraro</div>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
