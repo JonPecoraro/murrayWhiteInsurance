@@ -14,7 +14,8 @@
 			{{ Form::open(["url" => "quotes", "class" => "form"]) }}
 				{{ Form::select("type",
 					[
-						"auto" => "Auto"
+						"auto" => "Auto",
+						"specialEvents" => "Special Events"
 					/*
 						"business" => "Business",
 						"health" => "Health",

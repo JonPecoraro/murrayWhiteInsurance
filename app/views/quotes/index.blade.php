@@ -9,6 +9,8 @@
 		<?php $type = Input::get("type"); ?>
 		@if ($type === "auto")
 			@include("quotes.auto")
+		@elseif ($type === "specialEvents")
+			@include("quotes.specialEvents")
 <!--		
 		@elseif ($type === "business")
 			@include("quotes.business")
@@ -50,7 +52,8 @@
 				{{ Form::open(["class" => "form"]) }}
 					{{ Form::select("type",
 						[
-							"auto" => "Auto"
+							"auto" => "Auto",
+							"specialEvents" => "Special Events"
 						/*
 							"business" => "Business",
 							"health" => "Health",

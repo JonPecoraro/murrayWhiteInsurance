@@ -16,63 +16,31 @@
 ?>
 
 {{ Form::open(["url" => "autoQuote", "id" => "autoQuoteForm", "class" => "form"]) }}
-	<!-- top -->
+	@include("quotes.support.errorMessageMarkup")
+
+	<!-- top row -->
+	@include("quotes.support.contactMarkup")
+	<!-- second row -->
 	<div class="row">
-		<div class="col-xs-12 hide">
-			<p class="bg-danger errorBg">
-				<span class="glyphicon glyphicon-remove"></span>
-				Please fill out the required fields highlighted below
-			</p>
-		</div>
 		<div class="col-xs-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Contact Information</h3>
+					<h3 class="panel-title">Coverage Details</h3>
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-xs-6">
-							{{ Form::label("name", "* Primary Contact Name") }}
-							{{ Form::text("name", Input::old("name"), ["class" => "form-control required"]) }}
-						</div>
-						<div class="col-xs-6">
-							{{ Form::label("email", "* Email Address") }}
-							{{ Form::text("email", Input::old("email"), ["class" => "form-control required"]) }}
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							{{ Form::label("phone", "* Phone Number") }}
-							{{ Form::text("phone", Input::old("phone"), ["class" => "form-control required", "placeholder" => "xxx-xxx-xxxx"]) }}
-						</div>
 						<div class="col-xs-4">
-							{{ Form::label("mailingAddress", "* Mailing Address") }}
-							{{ Form::text("mailingAddress", Input::old("mailingAddress"), ["class" => "form-control required"]) }}
-						</div>
-						<div class="col-xs-2">
-							{{ Form::label("zipcode", "* Zip Code") }}
-							{{ Form::text("zipcode", Input::get("zipcode"), ["class" => "form-control required"]) }}
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							{{ Form::label("garagingAddress", "Garaging Address") }}
-							{{ Form::text("garagingAddress", Input::old("garagingAddress"), ["class" => "form-control"]) }}
-						</div>
-						<div class="col-xs-6">
-							{{ Form::label("county", "County") }}
-							{{ Form::text("county", Input::old("county"), ["class" => "form-control"]) }}
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
 							{{ Form::label("currentPremium", "Current Auto Policy Premium &amp; Coverage") }}
 							<div class="input-group">
 								<span class="input-group-addon">$</span>
 								{{ Form::text("currentPremium", Input::old("currentPremium"), ["class" => "form-control"]) }}
 							</div>
 						</div>
-						<div class="col-xs-6">
+						<div class="col-xs-4">
+							{{ Form::label("garagingAddress", "Garaging Address") }}
+							{{ Form::text("garagingAddress", Input::old("garagingAddress"), ["class" => "form-control"]) }}
+						</div>
+						<div class="col-xs-4">
 							{{ Form::label("nonDrivers", "Any non-drivers in the household?") }} <br />
 							{{ Form::label("nonDriverYes", "Yes")}}
 							{{ Form::radio("nonDrivers[]", "Yes", ["id" => "nonDriverYes"]) }}&nbsp;
@@ -84,6 +52,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- bottom row -->
 	<div class="row">
 		<!-- left side -->
 		<div class="col-xs-6">
@@ -218,12 +187,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row buttonRow">
-		<div class="col-xs-12">
-			{{ Form::button("Cancel", ["id" => "btnCancel", "class" => "btn btn-default pull-left"]) }}
-			{{ Form::submit("Get Quote", ["name" => "btnSubmitQuote", "class" => "btn btn-primary pull-right"]) }}
-		</div>
-	</div>
+	@include("quotes.support.buttonRowMarkup")
 {{ Form::close() }}
 
 <!-- insured driver template -->
