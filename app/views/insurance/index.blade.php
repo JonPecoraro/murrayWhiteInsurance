@@ -108,7 +108,7 @@
 							<li>The Long Shot</li>
 						</ul>
 						Details about the options from USLI are available from the {{ HTML::link("http://customers.usli.com/SpecialEvents/index.html", "USLI website") }}.<br />
-						{{ HTML::link("quotes", "Request a quote") }} for a special event today!
+						{{ HTML::link("https://services.usli.com/InstantQuote/?id=4709&templateID=53&mode=spe", "Request a quote", ["target" => "_blank"]) }} for a special event today!
 					</p>
 				</div>
 			</div>

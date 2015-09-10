@@ -10,7 +10,10 @@
 		@if ($type === "auto")
 			@include("quotes.auto")
 		@elseif ($type === "specialEvents")
-			@include("quotes.specialEvents")
+			<?php
+				header("Location: https://services.usli.com/InstantQuote/?id=4709&templateID=53&mode=spe");
+				exit();
+			?>
 <!--		
 		@elseif ($type === "business")
 			@include("quotes.business")
